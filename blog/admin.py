@@ -7,3 +7,4 @@ from blog.models import *
 class ArticleModel(admin.ModelAdmin):
     list_filter= ('title', 'created_at')
     list_display = ('title', 'description', 'updated_at')
+    date_hierarchy= "created_at"
