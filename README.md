@@ -1,2 +1,2 @@
-# to_do_list
+# Blog
 User specific to do list app
