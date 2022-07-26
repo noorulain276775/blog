@@ -4,4 +4,4 @@ from rest_framework.views import APIView
 
 class Home(APIView):
     def get(self, request):
-        return HttpResponse("Its working")
+        return HttpResponse("Its working", 200)

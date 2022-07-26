@@ -1,3 +1,6 @@
-from django.db import models
+# from django.db import models
+# from django.contrib.auth.
 
-# Create your models here.
+# # Create your models here.
+
+# class MyUser
