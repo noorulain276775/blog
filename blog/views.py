@@ -4,6 +4,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import *
 from .models import *
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+
+
 
 # Home View.
 
@@ -11,8 +15,10 @@ class Home(APIView):
     def get(self, request):
         return HttpResponse("Its a Home Page", 200)
 
+
 # Individual Articles
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ArticleDetailView(APIView):
 
     def get(self, request, id):
@@ -45,6 +51,7 @@ class ArticleDetailView(APIView):
 
 # All Articles
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ArticleView(APIView):
 
     def get(self, request):
