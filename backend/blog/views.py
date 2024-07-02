@@ -8,13 +8,6 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 
 
-# Home View.
-
-class Home(APIView):
-    def get(self, request):
-        return HttpResponse("Its a Home Page", 200)
-
-
 # CRUD operations on Articles
 
 class ArticleViewSet(viewsets.ViewSet):
