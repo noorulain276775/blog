@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import AspectRatio from "@mui/joy/AspectRatio";
@@ -6,13 +6,19 @@ import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import CardOverflow from "@mui/joy/CardOverflow";
-import Chip from "@mui/joy/Chip";
 import Link from "@mui/joy/Link";
 import Typography from "@mui/joy/Typography";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import "./Home.css";
+import { blogData } from "../../redux/action";
+import { useDispatch } from "react-redux";
 
 export const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(blogData());
+  }, [dispatch]);
   return (
     <>
       <Navbar />
@@ -20,7 +26,7 @@ export const Home = () => {
         <div className="blogs">
           <Card
             sx={{
-              width: { xs : 250, sm: 300, md: 350, lg: 400 },
+              width: { xs: 250, sm: 300, md: 350, lg: 400 },
               maxWidth: "100%",
               boxShadow: "lg",
             }}

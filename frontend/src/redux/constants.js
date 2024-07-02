@@ -1,0 +1,2 @@
+export const FETCH_BLOG_DATA = "FETCH_BLOG_DATA";
+export const POST_BLOG_DATA = "POST_BLOG_DATA";
