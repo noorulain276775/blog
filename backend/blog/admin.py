@@ -6,5 +6,5 @@ from blog.models import *
 @admin.register(Article)
 class ArticleModel(admin.ModelAdmin):
     list_filter= ('title', 'created_at')
-    list_display = ('title', 'description', 'updated_at')
+    list_display = ('title', 'short_description', 'updated_at', 'created_at')
     date_hierarchy= "created_at"

@@ -1,4 +1,8 @@
-.homePage-Container{
-    background-color: antiquewhite;
-    height: 100vh;
+.homePage-Container {
+  background-color: rgb(244, 242, 238);
+  height: 80vh;
+}
+
+.blogs {
+  padding: 150px 50px;
 }
