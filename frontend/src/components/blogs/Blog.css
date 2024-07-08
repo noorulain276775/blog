@@ -1,0 +1,17 @@
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.imageDiv {
+    display: flex;
+    align-items: center;
+}
+
+.imageDiv img {
+    width: 300px;
+    height: auto;
+}

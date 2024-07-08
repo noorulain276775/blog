@@ -8,3 +8,8 @@ class ArticleModel(admin.ModelAdmin):
     list_filter= ('title', 'created_at')
     list_display = ('title', 'short_description', 'updated_at', 'created_at')
     date_hierarchy= "created_at"
+
+@admin.register(Category)
+class CategoryModel(admin.ModelAdmin):
+    list_filter= ('name',)
+    list_display = ('name',)

@@ -6,6 +6,7 @@ from .serializers import *
 from .models import *
 from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
+from rest_framework.decorators import action
 
 
 # CRUD operations on Articles
@@ -24,9 +25,10 @@ class ArticleViewSet(viewsets.ViewSet):
             return Response(serializer.data)
         return Response(serializer.errors)
 
-    def retrieve(self, request, pk=None):
+    @action(detail=True, methods=['get'])
+    def retrieve_by_slug(self, request, slug=None):
         queryset = Article.objects.all()
-        article = get_object_or_404(queryset, pk=pk)
+        article = get_object_or_404(queryset, slug=slug)
         serializer = ArticleSerializer(article)
         return Response(serializer.data)
 

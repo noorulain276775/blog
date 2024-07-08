@@ -1,2 +1,5 @@
 export const FETCH_BLOG_DATA = "FETCH_BLOG_DATA";
 export const POST_BLOG_DATA = "POST_BLOG_DATA";
+export const UPDATE_BLOG_DATA = "UPDATE_BLOG_DATA";
+export const FETCH_ALL_BLOGS = "FETCH_ALL_BLOGS";
+export const DELETE_BLOG = "DELETE_BLOG";

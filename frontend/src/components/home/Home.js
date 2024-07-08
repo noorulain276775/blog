@@ -10,14 +10,22 @@ import Link from "@mui/joy/Link";
 import Typography from "@mui/joy/Typography";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import "./Home.css";
-import { blogData } from "../../redux/action";
-import { useDispatch } from "react-redux";
+import { blogsData, blogData } from "../../redux/action";
+import { useDispatch, useSelector } from "react-redux";
+import {useNavigate} from 'react-router-dom'
 
 export const Home = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const myBlogData = useSelector((state) => state.blogReducer)
+  console.log(myBlogData)
+
+  const handleGetBlog = () => {
+    navigate('/detail')
+  }
 
   useEffect(() => {
-    dispatch(blogData());
+    dispatch(blogsData());
   }, [dispatch]);
   return (
     <>
@@ -68,7 +76,7 @@ export const Home = () => {
                     backgroundColor: "#000",
                     color: "rgb(216, 229, 216)",
                   },
-                }}
+                }} onClick={handleGetBlog}
               >
                 Read More
               </Button>
