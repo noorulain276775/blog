@@ -1,8 +1,28 @@
 .homePage-Container {
   background-color: rgb(244, 242, 238);
-  height: 100%;
+  min-height: 100vh;
+  padding: 80px 0px;
 }
 
 .blogs {
-  padding: 150px 50px 150px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 97.5%;
+  margin: auto;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.card-div{
+  display: flex;
+}
+
+.blog-topContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 95%;
+  margin-bottom: 20px;
 }
