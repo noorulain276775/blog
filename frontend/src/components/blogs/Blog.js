@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Blog.css";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import myImage from "../../assets/images/culture.jpeg";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 
 export const Blog = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // useEffect(() => {
   //   dispatch(blogData());

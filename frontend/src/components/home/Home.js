@@ -16,13 +16,10 @@ import { API_URL } from "../../apiConstants";
 import "./Home.css";
 import Grouped from "./categorySearchFilter";
 
-
 export const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const myBlogData = useSelector((state) => state.blogData);
-  console.log("----------myblogData------------", myBlogData);
-
   const handleGetBlog = () => {
     navigate("/detail");
   };
@@ -36,7 +33,7 @@ export const Home = () => {
       <div className="homePage-Container">
         <div className="blog-topContent">
           <h1>All Blogs</h1>
-            <Grouped />
+          <Grouped />
         </div>
 
         <div className="blogs">

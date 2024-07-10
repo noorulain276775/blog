@@ -8,3 +8,9 @@ class ArticleSerializer(serializers.ModelSerializer):
         model = Article
         fields = ['id', 'title', 'description', 'short_description', 'slug', 'image', 'category']
         read_only_fields = ['updated_at', 'created_at']
+
+
+class CategorySerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
