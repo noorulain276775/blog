@@ -1,7 +1,7 @@
 # Blog Project
 - <b>Authentication:</b> Implemented DRF token authentication and utilized DRF's Generic Views for seamless login and registration functionality.
 - <b>API Testing:</b> Conducted thorough testing of API endpoints for registration and login using Postman, ensuring robust functionality and reliability.
-UI Development: Leveraged MUI ready-made components to streamline UI development, allowing more focus on implementing functionality.
+- <b>UI Development:</b> Leveraged MUI ready-made components to streamline UI development, allowing more focus on implementing functionality.
 - <b>State Management:</b> Utilizing React Redux Saga for asynchronous API calls to fetch data from the backend, anticipating the need for more complex functionalities in future project expansions.
 - <b>Rich Text Editor:</b> Added a Rich Text Editor for the description of articles to support multiple headings.
 - Slug Handling: Used slugs for retrieving single articles in backend APIs.
