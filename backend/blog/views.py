@@ -10,8 +10,11 @@ from rest_framework.decorators import action
 class ArticleViewSet(viewsets.ViewSet):
 
     def list(self, request):
-        article = Article.objects.all()
-        serializer = ArticleSerializer(article, many=True)
+        queryset = Article.objects.all()
+        category_slug = request.query_params.get('category_slug')
+        if category_slug:
+            queryset = queryset.filter(category__name=category_slug)
+        serializer = ArticleSerializer(queryset, many=True)
         return Response(serializer.data)
 
     def create(self, request):
