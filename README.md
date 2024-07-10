@@ -4,7 +4,7 @@
 - <b>UI Development:</b> Leveraged MUI ready-made components to streamline UI development, allowing more focus on implementing functionality.
 - <b>State Management:</b> Utilizing React Redux Saga for asynchronous API calls to fetch data from the backend, anticipating the need for more complex functionalities in future project expansions.
 - <b>Rich Text Editor:</b> Added a Rich Text Editor for the description of articles to support multiple headings.
-- Slug Handling: Used slugs for retrieving single articles in backend APIs.
+- <b>Slug Handling:</b> Used slugs for retrieving single articles in backend APIs.
 
 
 ## New Implementations Today
